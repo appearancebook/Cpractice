@@ -137,15 +137,12 @@ int main(void)
     int i = 0;
     for (i = 0; i < n; i++)
     {
-        scanf("%d", arr[i]);//赋值
+        scanf("%d", &arr[i]);//赋值
     }
     scanf("%d", m);//要查找的数
     int left = 0;
     int right = n - 1;
-    while (m!=arr[(left+right)/2])
-    {
 
-    }
     /*********End**********/
     return 0;
 }
