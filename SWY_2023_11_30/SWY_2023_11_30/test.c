@@ -124,24 +124,105 @@
 //    return 0;
 //}
 
+//#include<stdio.h>
+//int main(void)
+//{
+//    /*********Begin*********/
+//    int n = 0;
+//    int m = 0;
+//    int a = 0;
+//    
+//    
+//    scanf("%d", &n);//一共有几个数
+//    int arr[20] = { 0 };//初始化
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%d", &arr[i]);//赋值
+//    }
+//    scanf("%d", &m);//要查找的数
+//    int left = 0;
+//    int right = n - 1;
+//    while ((right-left)>1)//当left和right相邻时
+//    {
+//        if (arr[(left + right) / 2] ==m )
+//        {
+//            a = (left + right) / 2;
+//            break;
+//        }
+//        else if (arr[(left + right) / 2] > m)
+//        {
+//            right = (left + right) / 2;
+//        }
+//        else
+//        {
+//            left = (left + right) / 2;
+//        }
+//    }
+//    if (arr[a] == m)
+//        printf("%d", a + 1);
+//    else
+//        printf("None");
+//    /*********End**********/
+//    return 0;
+//}
+
+
 #include<stdio.h>
 int main(void)
 {
     /*********Begin*********/
-    int n = 0;
-    int m = 0;
-    
-    
-    scanf("%d", &n);//一共有几个数
-    int arr[20] = { 0 };//初始化
+    int a = 0;
+    int b = 0;
+    int max = 0;
+    int min = 0;
+    int arr[10][10] = { 0 };
+    scanf("%d %d", &a, &b);
     int i = 0;
-    for (i = 0; i < n; i++)
+    for (i = 0; i < a; i++)
     {
-        scanf("%d", &arr[i]);//赋值
+        int j = 0;
+        for (j = 0; j < b; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+        printf("\n");
     }
-    scanf("%d", m);//要查找的数
-    int left = 0;
-    int right = n - 1;
+
+
+    
+    for (i = 0; i < a; i++)
+    {
+        max = arr[i][0];
+     
+        int j = 0;
+        for (j = 0; j < b; j++)
+        {
+            //找出每行最大的
+            if (arr[i][j] > max)
+            {
+                max = arr[i][j];
+            }
+            
+            
+        }
+        min = arr[0][j];
+        for (j = 0; j < a; j++)
+        {
+            //找出每列最大
+            if (arr[j][i] < min)
+            {
+                min = arr[j][i];
+            }
+        }
+        if (max == min)
+        {
+            printf("Array[%d][%d]=%d", j, i, max);
+            break;
+        }
+        
+    }
+
 
     /*********End**********/
     return 0;
