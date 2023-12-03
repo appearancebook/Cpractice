@@ -271,77 +271,161 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-#include <assert.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <assert.h>
+//#include <stdlib.h>
 
-enum 
-{
-	abc,
-	bcd
-}pd=bcd;
+//enum 
+//{
+//	abc,
+//	bcd
+//}pd=bcd;
+//
+//
+//int my_atoi(const char* str)
+//{
+//	assert(str);
+//	long long ret = 0;
+//	int flag = 1;
+//	//遇到空字符串
+//	if (*str == '\0')
+//	{
+//		return 0;
+//	}
+//	//跳过空白字符
+//	while (*str == ' ')
+//	{
+//		str++;
+//	}
+//		//处理正负号
+//		if (*str == '-' || *str == '+')
+//		{
+//			flag = -1;
+//			str++;
+//		}
+//		
+//		while (*str)
+//		{
+//			//判断是否是数字字符
+//			if (isdigit(*str))
+//			{
+//				ret = ret * 10 + flag * (*str - '0');
+//
+//				//判断是否超出范围
+//				if (ret > INT_MAX || ret < INT_MIN)
+//				{
+//					return (int)ret;
+//				}
+//			}
+//
+//			//如果遇到的字符不是数字字符
+//			else
+//			{
+//
+//				return (int)ret;
+//			}
+//			str++;
+//		}
+//		
+//
+//	pd = abc;
+//	return (int)ret;
+//}
+//
+//int main()
+//{
+//	int ret = my_atoi("    050702");
+//	if (pd == abc)
+//	{
+//		printf("%d\n", ret);
+//	}
+//	else
+//	{
+//		printf("非法转换\n");
+//		printf("%d\n", ret);
+//
+//	}
+//	return 0;
+//}
 
+//#include <stdio.h>
+//#define TMP(a) (((a)&0xaaaaaaaa)>>1)+(((a)&0x55555555)<<1)
+////               偶数位左移             奇数位右移
+//
+//int main()
+//{
+//	int a = 5;
+//	printf("%d\n", TMP(a));
+//	a = TMP(a);
+//	printf("%d\n", TMP(a));
+//
+//	return 0;
+//}
 
-int my_atoi(const char* str)
-{
-	assert(str);
-	long long ret = 0;
-	int flag = 1;
-	//遇到空字符串
-	if (*str == '\0')
-	{
-		return 0;
-	}
-	//跳过空白字符
-	while (*str == ' ')
-	{
-		str++;
-	}
-	//处理正负号
-	if (*str == '-' || *str == '+')
-	{
-		flag = -1;
-	}
+//#include<stdio.h>
+//
+//#define OFFSETOF(type,dest) (size_t)&(((type*)0)->dest)
+//
+//
+//struct S
+//{
+//	short s;//0
+//	int i;  //4
+//	char c1;//8
+//	char c2;//9
+//};
+//
+//int main()
+//{
+//	printf("%d\n", OFFSETOF(struct S, s));
+//	printf("%d\n", OFFSETOF(struct S, i));
+//	printf("%d\n", OFFSETOF(struct S, c1));
+//	printf("%d\n", OFFSETOF(struct S, c2));
+//	return 0;
+//}
 
-	while (*str)
-	{
-		//判断是否是数字字符
-		if (isdigit(*str))
-		{
-			ret = ret * 10 + flag * (*str - '0');
-
-			//判断是否超出范围
-			if (ret > INT_MAX || ret < INT_MIN)
-			{
-				return (int)ret;
-			}
-		}
-		
-		//如果遇到的字符不是数字字符
-		else
-		{
-		
-			return (int)ret;
-		}
-		str++;
-	}
-	pd = abc;
-	return (int)ret;
-}
-
-int main()
-{
-	int ret = atoi("    -1111111111");
-	//printf("%d", ret); 
-	if (pd == abc)
-	{
-		printf("%d\n", ret);
-	}
-	else
-	{
-		printf("非法转换\n");
-		printf("%d\n", ret);
-
-	}
-	return 0;
-}
+//#include <stdio.h>
+//#include <math.h>
+//
+//
+//void dog(int* a, int sz,int* p1,int* p2)
+//{
+//	int i = 0;
+//	int ret = 0;
+//	//1.所有数字异或在一起
+//	for (i = 0; i < sz; i++)
+//	{
+//		ret = ret ^ a[i];
+//	}
+//	//2.计算ret的第几位是1
+//	int pos = 0;
+//	for (i = 0;i<32; i++)
+//	{
+//		if (((ret >> i) & 1) == 1)
+//		{
+//			pos = i;
+//			break;
+//		}
+//	}
+//	//3.计算数组中元素的第pos位为1的异或
+//	for (i = 0; i < sz; i++)
+//	{
+//		if (((a[i] >> pos) & 1) == 1)
+//		{
+//			*p1 = *p1 ^ a[i];
+//		}
+//	}
+//	//4.ret^dog1==dog2;
+//	*p2 = ret ^ *p1;
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,1,2,3,4,6 };
+//	int dog1 = 0;
+//	int dog2 = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	dog(arr, sz,&dog1,&dog2);
+//	printf("%d\n%d\n", dog1, dog2);
+//	return 0;
+//}
