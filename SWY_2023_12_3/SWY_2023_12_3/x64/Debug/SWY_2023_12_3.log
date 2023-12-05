@@ -1,4 +1,6 @@
 ﻿  Contact.c
 D:\practice.c\SWY_2023_12_3\SWY_2023_12_3\Contact.c(161,60): warning C4090: “函数”: 不同的“const”限定符
 D:\practice.c\SWY_2023_12_3\SWY_2023_12_3\Contact.c(161,45): warning C4113: “int (__cdecl *)(void *,void *)”和“_CoreCrtNonSecureSearchSortCompareFunction”的参数列表不同
+  test.c
+  正在生成代码...
   SWY_2023_12_3.vcxproj -> D:\practice.c\SWY_2023_12_3\x64\Debug\SWY_2023_12_3.exe

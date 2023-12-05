@@ -68,4 +68,5 @@ void ClearContact(Contact* con);
 //按名字给联系人进行排序
 void QsortContact(Contact* con);
 
+//qsort 所需要的函数
 int CmpContact_name(void* x, void* y);

@@ -384,48 +384,48 @@
 //	return 0;
 //}
 
-//#include <stdio.h>
-//#include <math.h>
-//
-//
-//void dog(int* a, int sz,int* p1,int* p2)
-//{
-//	int i = 0;
-//	int ret = 0;
-//	//1.所有数字异或在一起
-//	for (i = 0; i < sz; i++)
-//	{
-//		ret = ret ^ a[i];
-//	}
-//	//2.计算ret的第几位是1
-//	int pos = 0;
-//	for (i = 0;i<32; i++)
-//	{
-//		if (((ret >> i) & 1) == 1)
-//		{
-//			pos = i;
-//			break;
-//		}
-//	}
-//	//3.计算数组中元素的第pos位为1的异或
-//	for (i = 0; i < sz; i++)
-//	{
-//		if (((a[i] >> pos) & 1) == 1)
-//		{
-//			*p1 = *p1 ^ a[i];
-//		}
-//	}
-//	//4.ret^dog1==dog2;
-//	*p2 = ret ^ *p1;
-//}
-//
-//int main()
-//{
-//	int arr[] = { 1,2,3,4,5,1,2,3,4,6 };
-//	int dog1 = 0;
-//	int dog2 = 0;
-//	int sz = sizeof(arr) / sizeof(arr[0]);
-//	dog(arr, sz,&dog1,&dog2);
-//	printf("%d\n%d\n", dog1, dog2);
-//	return 0;
-//}
+#include <stdio.h>
+#include <math.h>
+
+
+void dog(int* a, int sz,int* p1,int* p2)
+{
+	int i = 0;
+	int ret = 0;
+	//1.所有数字异或在一起
+	for (i = 0; i < sz; i++)
+	{
+		ret = ret ^ a[i];
+	}
+	//2.计算ret的第几位是1
+	int pos = 0;
+	for (i = 0;i<32; i++)
+	{
+		if (((ret >> i) & 1) == 1)
+		{
+			pos = i;
+			break;
+		}
+	}
+	//3.计算数组中元素的第pos位为1的异或
+	for (i = 0; i < sz; i++)
+	{
+		if (((a[i] >> pos) & 1) == 1)
+		{
+			*p1 = *p1 ^ a[i];
+		}
+	}
+	//4.ret^dog1==dog2;
+	*p2 = ret ^ *p1;
+}
+
+int main()
+{
+	int arr[] = { 1,2,3,4,5,1,2,3,4,6 };
+	int dog1 = 0;
+	int dog2 = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	dog(arr, sz,&dog1,&dog2);
+	printf("%d\n%d\n", dog1, dog2);
+	return 0;
+}

@@ -1,0 +1,4 @@
+﻿  Contact.c
+D:\practice.c\SWY_2023_12_4\SWY_2023_12_4\Contact.c(9,50): warning C4028: 形参 1 与声明不同
+D:\practice.c\SWY_2023_12_4\SWY_2023_12_4\Contact.c(9,50): warning C4028: 形参 2 与声明不同
+  SWY_2023_12_4.vcxproj -> D:\practice.c\SWY_2023_12_4\x64\Debug\SWY_2023_12_4.exe
