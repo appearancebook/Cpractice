@@ -1,0 +1,3 @@
+﻿  test.c
+D:\practice.c\SWY_2023_12_10\SWY_2023_12_10\test.c(682,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  SWY_2023_12_10.vcxproj -> D:\practice.c\SWY_2023_12_10\x64\Debug\SWY_2023_12_10.exe
