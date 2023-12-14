@@ -666,33 +666,106 @@
 //    return 0;
 //}
 
-#include<stdio.h>
-#include <string.h>
-int main(void)
-{
-    /*********Begin*********/
-    int n = 0;
-    int arr1[100] = { 0 };
-    scanf("%d", &n);
-    int i = 0;
-    for (i = 0; i < n; i++)
-    {
-        char arr[100] = { 0 };
-        scanf("%s", &arr);
-        int len = strlen(arr);
-        int count = 0;
-        int j = 0;
-        for (j = 0; j < len; j++)
-        {
-            if (arr[j] >= '0' && arr[j] <= '9')
-                count++;
-        }
-        arr1[i] = count;
-    }
-    for (i = 0; i < n; i++)
-    {
-        printf("%d\n", arr1[i]);
-    }
-    /*********End**********/
-    return 0;
-}
+//#include<stdio.h>
+//#include <string.h>
+//int main(void)
+//{
+//    /*********Begin*********/
+//    int n = 0;
+//    int arr1[100] = { 0 };
+//    scanf("%d", &n);
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        char arr[100] = { 0 };
+//        scanf("%s", &arr);
+//        int len = strlen(arr);
+//        int count = 0;
+//        int j = 0;
+//        for (j = 0; j < len; j++)
+//        {
+//            if (arr[j] >= '0' && arr[j] <= '9')
+//                count++;
+//        }
+//        arr1[i] = count;
+//    }
+//    for (i = 0; i < n; i++)
+//    {
+//        printf("%d\n", arr1[i]);
+//    }
+//    /*********End**********/
+//    return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//int main(void)
+//{
+//        //样例输入：
+//        //MynameisAmy
+//        //MynameisJane
+//        //样例输出：
+//        //MynameisAymy
+//    /*********Begin*********/
+//    char arr1[100] = { 0 };
+//    char arr2[100] = { 0 };
+//    int min = 0;
+//    int max = 0;
+//    scanf("%s", &arr1);
+//    scanf("%s", &arr2);
+//    int len2 = strlen(arr2);
+//    int len1 = strlen(arr1);
+//    int i = 0;
+//    for (i = 0; i < len1; i++)
+//    {
+//        if (arr1[min] > arr1[i])
+//        {
+//            min = i;
+//        }
+//    }
+//    for (i = 0; i < len2; i++)
+//    {
+//        if (arr2[max] < arr2[i])
+//        {
+//            max = i;
+//        }
+//    }
+//    int len3 = strlen(arr1 + min);
+//    for (i = 0; i < len3; i++)
+//    {
+//        arr1[min + len3 - i] = arr1[min + len3 - i-1];
+//    }
+//    arr1[min + 1] = arr2[max];
+//
+//    printf("%s\n", arr1);
+//    /*********End**********/
+//    return 0;
+//}
+
+
+//#include<stdio.h>
+//#include<string.h>
+//int main(void)
+//{
+//    /*********Begin*********/
+//    char arr1[200] = { 0 };
+//    char arr2[200] = { 0 };
+//    int f = 0;
+//    scanf("%s", &arr1);
+//    scanf("%s", &arr2);
+//    scanf("%d", &f);
+//    int len1 = strlen(arr2);
+//    int len2 = strlen(arr1 + f);
+//    int i = 0;
+//    for (i = 0; i < len2; i++)
+//    {
+//        arr1[f + len2 - 1 - i + len1] = arr1[f + len2 - 1 - i];
+//    }
+//    for (i = 0; i < len1; i++)
+//    {
+//        arr1[f + i] = arr2[i];
+//    }
+//    printf("%s", arr1);
+//    /*********End**********/
+//    return 0;
+//}
