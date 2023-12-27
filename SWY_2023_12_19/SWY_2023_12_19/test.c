@@ -158,7 +158,6 @@ int main(void)
 //	printf("The transposed matrix is:\n");
 	/***********begin**********/
 	//输出转置矩阵,*st指向st的0行0列,是列指针
-	PrintMatrix(s[0], ROW, COL);
 	PrintMatrix(st[0], COL, ROW);
 	
 
@@ -176,7 +175,7 @@ void Transpose(int* a, int* at, int row, int col)
 		int j = 0;
 		for (j = 0; j < col;j++)
 		{
-			(at + 2)[i] = 1;
+			(at + row*j)[i] = (a+col*i)[j];
 		}
 	}
 
